@@ -10,15 +10,13 @@ module Dlibhydraworkflow
     end
   end
 
-  autoload_under 'processors/thesis' do
-    autoload :Pdf
-    autoload :Doc
-    autoload :Docx
-    autoload :Image
+  autoload_under 'processors/concerns' do
+    autoload :GenericFile
+    autoload :Jpg
   end
 
   autoload_under 'processors/collection' do
-    autoload :Collection
+    autoload :Image
   end
 
 end
