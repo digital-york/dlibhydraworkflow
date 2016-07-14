@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wf:workflow xmlns:wf="http://dlib.york.ac.uk/workflow">
+    <wf:scenario id="York-Fedora-Thesis-Object"
+                 inherits="York-Fedora-ALL-Object"
+                 model="Thesis"
+				 abstract="false">
+        
+        <!-- File processing logic for PDF -->
+        <wf:fileprocessor mime="application/pdf">
+            <!-- The fileobjectid can be provided in the workflow client XML  -->
+            <!-- If fileobjectid is provided, workflow will update the fileobject -->
+            <!-- otherwise, it will create a new file object -->
+            <wf:addorupdatefileobject replaceexisting="false"/>
+            
+            <!-- Remove file -->
+            <!-- by default, file name is specified from workflow client xml -->
+			<wf:removefile/>
+        </wf:fileprocessor>
+        
+        <!-- File processing logic for DOCX -->
+        <wf:fileprocessor mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <wf:addorupdatefileobject replaceexisting="false"/>
+            
+			<wf:removefile/>
+        </wf:fileprocessor>
+        
+        <!-- File processing logic for DOC -->
+        <wf:fileprocessor mime="application/msword">
+            <wf:addorupdatefileobject replaceexisting="false"/>
+			<wf:removefile/>
+        </wf:fileprocessor>
+		
+		<!-- File processing logic for JPG -->
+        <wf:fileprocessor mime="image/jpeg">
+            <wf:addorupdatefileobject replaceexisting="false"/>
+			<wf:removefile/>
+        </wf:fileprocessor>
+
+    </wf:scenario>
+</wf:workflow>
