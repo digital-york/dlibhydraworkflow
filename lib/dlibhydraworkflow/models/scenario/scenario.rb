@@ -1,12 +1,12 @@
-module Dlihydraworkflow
+module Dlibhydraworkflow
 
-    puts 'module Dlibhydraworkflow.scenario is loaded'
+    # puts 'module Dlibhydraworkflow.scenario is loaded'
 
     class Scenario
        attr_accessor :id, :affiliate, :repository, :model, :parent, :abstract, :preprocessors, :postprocessors, :fileprocessors
        
-       def getfileprocessors   
-                
+       def self.getfileprocessors   
+          r = nil      
        end
 
 
