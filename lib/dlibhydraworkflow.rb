@@ -5,6 +5,7 @@ module Dlibhydraworkflow
 
   autoload_under 'models/scenario' do
     autoload :Scenario
+    autoload :ScenarioLoader
   end
 
 end
