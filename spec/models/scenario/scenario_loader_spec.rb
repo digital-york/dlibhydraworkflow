@@ -30,7 +30,18 @@ describe Dlibhydraworkflow::ScenarioLoader do
         expect(scenario.repository).to eql('Fedora')
         expect(scenario.model).to eql('Thesis')
         expect(scenario.abstract).to eql('false')
-       
+        # test file processors
+        fileprocessors = scenario.fileprocessors
+        expect(fileprocessors.size).to eql(4)
+        for fileprocessor in fileprocessors
+          expect(fileprocessor.mime).should_not be_nil
+          # test commands for current file processor
+          commands = fileprocessor.commands
+          expect(commands.size).to be >= 1
+          for command in commands
+            expect(command.name).should_not be_nil
+          end 
+        end
       end
     end
   end

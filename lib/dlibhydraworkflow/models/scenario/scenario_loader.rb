@@ -28,7 +28,10 @@ module Dlibhydraworkflow
               commands = []
               command_elts = fileprocessor_ele.children
               for command_elt in command_elts
-                commands << command_elt.name
+                command = Command.new
+                command.name = command_elt.name
+                command.replaceexisting = command_elt.attr('replaceexisting')
+                commands << command
               end
               fileprocessor.commands = commands
               fileprocessors << fileprocessor

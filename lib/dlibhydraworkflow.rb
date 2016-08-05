@@ -7,6 +7,7 @@ module Dlibhydraworkflow
     autoload :Scenario
     autoload :ScenarioLoader
     autoload :Fileprocessor
+    autoload :Command
   end
 
   autoload_under 'models/scenario/commands' do
