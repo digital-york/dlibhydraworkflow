@@ -1,3 +1,6 @@
+require 'dlibhydra'
+require 'hydra/works'
+
 module Dlibhydraworkflow
 
   class Addthesis
