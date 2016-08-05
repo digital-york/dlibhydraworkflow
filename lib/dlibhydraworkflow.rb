@@ -12,6 +12,7 @@ module Dlibhydraworkflow
 
   autoload_under 'models/scenario/commands' do
     autoload :Addwork
+    autoload :Addthesis
     autoload :Addfileobject
   end
 

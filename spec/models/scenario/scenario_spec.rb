@@ -5,7 +5,9 @@ describe Dlibhydraworkflow::Scenario do
   describe ".getfileprocessors" do
    context "given nothing" do
       it "returns nil" do
-        expect(Dlibhydraworkflow::Scenario.getfileprocessors).to eql(nil)
+        p = Dlibhydraworkflow::Scenario.getfileprocessors
+        # To fix: should_not be_nil is NOT working
+        expect(p).should_not be_nil
       end
     end
   end
