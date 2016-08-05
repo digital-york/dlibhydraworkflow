@@ -6,6 +6,12 @@ module Dlibhydraworkflow
   autoload_under 'models/scenario' do
     autoload :Scenario
     autoload :ScenarioLoader
+    autoload :Fileprocessor
+  end
+
+  autoload_under 'models/scenario/commands' do
+    autoload :Addwork
+    autoload :Addfileobject
   end
 
 end

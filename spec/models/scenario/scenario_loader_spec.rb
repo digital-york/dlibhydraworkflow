@@ -26,6 +26,8 @@ describe Dlibhydraworkflow::ScenarioLoader do
 
         expect(scenario).to be_truthy
         expect(scenario.id).to eql('York-Fedora-Thesis-Object')
+        expect(scenario.affiliate).to eql('York')
+        expect(scenario.repository).to eql('Fedora')
         expect(scenario.model).to eql('Thesis')
         expect(scenario.abstract).to eql('false')
        
