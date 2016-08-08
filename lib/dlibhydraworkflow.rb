@@ -17,7 +17,7 @@ module Dlibhydraworkflow
     autoload :Addfileobject
   end
 
-  # Configure fedora through yaml file
+  # Load config from yaml files
   def self.configure_with(config_file_path)
     logger = Logger.new('dlibhydraworkflow.log')
     begin
