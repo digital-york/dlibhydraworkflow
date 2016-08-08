@@ -1,4 +1,4 @@
-require "dlibhydraworkflow/version"
+require "dlibhydraworkflow/version" 
 require 'logger'
 
 module Dlibhydraworkflow
@@ -15,6 +15,7 @@ module Dlibhydraworkflow
     autoload :Addwork
     autoload :Addthesis
     autoload :Addfileobject
+    autoload :Addcollection
   end
 
   # Load config from yaml files
