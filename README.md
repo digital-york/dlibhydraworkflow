@@ -18,3 +18,12 @@ Or install it yourself as:
 
     $ gem install dlibhydraworkflow
 
+## Configuration
+make sure fedora and solr are properly configured. Example can be found in
+
+config/fedora.yml.DEMO
+
+config/solr.yml.DEMO
+
+
+
