@@ -25,5 +25,5 @@ config/fedora.yml.DEMO
 
 config/solr.yml.DEMO
 
-
+you may want to create config/fedora.yml and config/solr.yml in your application folder, or merge into your own configuration file.
 
